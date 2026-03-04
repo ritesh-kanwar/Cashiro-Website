@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/ui/feature-carousel";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import { ScreenshotCarousel } from "@/components/ui/screenshot-carousel";
 import { useState, useEffect } from "react";
+import { assetPath } from "@/lib/utils";
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -33,6 +34,7 @@ export default function Home() {
   }, []);
 
   const galleryScreenshots = [
+<<<<<<< HEAD
     { src: '/screenshots/transactions_${theme}.png', alt: "Transactions View", title: "Transactions View" },
     { src: '/screenshots/analytics_${theme}.png', alt: "Analytics View", title: "Analytics View" },
     { src: '/screenshots/budgets_${theme}.png', alt: "Budget View", title: "Budget View" },
@@ -45,6 +47,20 @@ export default function Home() {
     { src: '/screenshots/settings_${theme}.png', alt: "Settings", title: "Settings" },
     { src: '/screenshots/appearance_${theme}.png', alt: "Appearance", title: "Appearance" },
     { src: '/screenshots/profile_${theme}.png', alt: "Profile", title: "Profile" },
+=======
+    { src: assetPath(`/screenshots/transactions_\${theme}.png`), alt: "Transactions View", title: "Transactions View" },
+    { src: assetPath(`/screenshots/analytics_\${theme}.png`), alt: "Analytics View", title: "Analytics View" },
+    { src: assetPath(`/screenshots/budgets_\${theme}.png`), alt: "Budget View", title: "Budget View" },
+    { src: assetPath(`/screenshots/budget_history_\${theme}.png`), alt: "Budget History", title: "Budget History" },
+    { src: assetPath(`/screenshots/budget_details_\${theme}.png`), alt: "Budget Detail", title: "Budget Detail" },
+    { src: assetPath(`/screenshots/chat_\${theme}.png`), alt: "AI Assistant", title: "AI Assistant" },
+    { src: assetPath(`/screenshots/subscriptions_\${theme}.png`), alt: "Subscriptions", title: "Subscriptions" },
+    { src: assetPath(`/screenshots/categories_\${theme}.png`), alt: "Categories", title: "Categories" },
+    { src: assetPath(`/screenshots/smart_rule_\${theme}.png`), alt: "Smart Rules", title: "Smart Rules" },
+    { src: assetPath(`/screenshots/settings_\${theme}.png`), alt: "Settings", title: "Settings" },
+    { src: assetPath(`/screenshots/appearance_\${theme}.png`), alt: "Appearance", title: "Appearance" },
+    { src: assetPath(`/screenshots/profile_\${theme}.png`), alt: "Profile", title: "Profile" },
+>>>>>>> 9ac8eed57cee27afe4e447f827a666797920dd06
   ];
 
   return (
@@ -59,11 +75,19 @@ export default function Home() {
         }
         subtitle="Cashiro turns your bank SMS and PDF statements into a clean, searchable financial timeline with secure regex patterns. No cloud, no tracking, just your money."
         images={[
+<<<<<<< HEAD
           { src: '/screenshots/home_${theme}.png', alt: "Cashiro Home Screen" },
           { src: '/screenshots/analytics_${theme}.png', alt: "Cashiro Analytics Screen" },
           { src: '/screenshots/budgets_${theme}.png', alt: "Cashiro Budgets Screen" },
           { src: '/screenshots/transactions_${theme}.png', alt: "Cashiro Transactions Screen" },
           { src: '/screenshots/profile_${theme}.png', alt: "Cashiro Profile Screen" },
+=======
+          { src: assetPath(`/screenshots/home_\${theme}.png`), alt: "Cashiro Home Screen" },
+          { src: assetPath(`/screenshots/analytics_\${theme}.png`), alt: "Cashiro Analytics Screen" },
+          { src: assetPath(`/screenshots/budgets_\${theme}.png`), alt: "Cashiro Budgets Screen" },
+          { src: assetPath(`/screenshots/transactions_\${theme}.png`), alt: "Cashiro Transactions Screen" },
+          { src: assetPath(`/screenshots/profile_\${theme}.png`), alt: "Cashiro Profile Screen" },
+>>>>>>> 9ac8eed57cee27afe4e447f827a666797920dd06
         ]}
         theme={theme}
         className={styles.heroWrapper}
