@@ -42,6 +42,11 @@ const GlowCard: React.FC<GlowCardProps> = ({
     const [isHovered, setIsHovered] = React.useState(false);
 
     useEffect(() => {
+        // Skip pointer tracking on touch devices — the spotlight glow is a mouse-only effect.
+        // On mobile, the global pointermove listener fires on every scroll frame, causing jank.
+        const isTouchDevice = window.matchMedia('(hover: none)').matches;
+        if (isTouchDevice) return;
+
         const syncPointer = (e: PointerEvent) => {
             const { clientX: x, clientY: y } = e;
 
@@ -53,7 +58,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
             }
         };
 
-        document.addEventListener('pointermove', syncPointer);
+        document.addEventListener('pointermove', syncPointer, { passive: true });
         return () => document.removeEventListener('pointermove', syncPointer);
     }, []);
 
@@ -95,8 +100,9 @@ const GlowCard: React.FC<GlowCardProps> = ({
             backgroundAttachment: 'fixed',
             border: 'var(--border-size) solid var(--backup-border)',
             position: 'relative' as const,
-            touchAction: 'none' as const,
+            // Do NOT set touchAction: 'none' — that blocks scroll when finger starts on a card
             borderRadius: `${radius}px`,
+            willChange: 'background-image', // promote to GPU layer for smoother hover effects
         };
 
         // Add width and height if provided
