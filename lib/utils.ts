@@ -14,7 +14,7 @@ export function assetPath(path: string, theme?: string) {
         processedPath = processedPath.replace(/\$\{theme\}/g, theme)
     }
 
-    const basePath = '/Cashiro-Website'
+    const basePath = '/cashiro.showcase'
     if (processedPath.startsWith(basePath)) return processedPath
 
     const cleanPath = processedPath.startsWith('/') ? processedPath : `/${processedPath}`
