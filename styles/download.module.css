@@ -271,9 +271,66 @@
 }
 
 .fDroidBadge {
+    margin-top: 80px;
     text-align: center;
     color: var(--muted-foreground);
-    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+/* Support Section */
+.supportSection {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.supportSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.supportSection p {
+    color: var(--muted-foreground);
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 48px;
+}
+
+.supportGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.supportCard {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.supportIcon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: #00e5a0;
+}
+
+.supportCard h3 {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.supportCard p {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
 }
 
 .fDroidBadge p {

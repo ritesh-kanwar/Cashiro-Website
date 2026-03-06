@@ -1,4 +1,4 @@
-import { Download, Github, Shield, Info, Smartphone, Apple, ShoppingBag } from "lucide-react";
+import { Download, Github, Shield, Info, Smartphone, Apple, ShoppingBag, Coffee, Heart, CreditCard } from "lucide-react";
 import { EtherealShadow } from "@/components/ui/etheral-shadow";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import styles from "@/styles/download.module.css";
@@ -51,10 +51,10 @@ export default function DownloadPage() {
                                 <div className={styles.optionIcon}><Smartphone size={32} /></div>
                                 <h3>F-Droid</h3>
                                 <p>Cashiro is available on F-Droid, the decentralized app store for FOSS.</p>
-                                <a href="https://f-droid.org/packages/com.ritesh_kanwar.cashiro/" target="_blank" rel="noopener noreferrer" className={`${styles.btnDownload} ${styles.btnOrange}`}>
+                                <button className={`${styles.btnComingSoon} ${styles.btnOrange}`}>
                                     <Download size={20} />
-                                    Get it on F-Droid
-                                </a>
+                                    F-Droid (Coming Soon)
+                                </button>
                             </div>
                         </GlowCard>
 
@@ -121,6 +121,52 @@ export default function DownloadPage() {
                     <div className={styles.fDroidBadge}>
                         <p className={styles.fossTag}>100% Free and Open Source Software (FOSS)</p>
                         <p>All builds are signed and verified. You can also build from source if you prefer.</p>
+                    </div>
+
+                    <div className={styles.supportSection}>
+                        <h2>Support Development</h2>
+                        <p>Cashiro is developed and maintained with passion. If you find the app helpful, consider supporting the development.</p>
+
+                        <div className={styles.supportGrid}>
+                            <GlowCard glowColor="orange" customSize={true}>
+                                <div className={styles.supportCard}>
+                                    <div className={styles.supportIcon} style={{ color: "#FFDD00" }}>
+                                        <Coffee size={32} />
+                                    </div>
+                                    <h3>Buy Me a Coffee</h3>
+                                    <p>Support with a small one-time donation to keep the project moving.</p>
+                                    <a href="https://buymeacoffee.com/modestcat0a" target="_blank" rel="noopener noreferrer" className={`${styles.btnDownload} ${styles.btnOrange}`}>
+                                        Support on BMC
+                                    </a>
+                                </div>
+                            </GlowCard>
+
+                            <GlowCard glowColor="blue" customSize={true}>
+                                <div className={styles.supportCard}>
+                                    <div className={styles.supportIcon} style={{ color: "#29ABE2" }}>
+                                        <Heart size={32} />
+                                    </div>
+                                    <h3>Ko-fi</h3>
+                                    <p>Another way to show your appreciation and help us grow.</p>
+                                    <a href="https://ko-fi.com/modestcat03" target="_blank" rel="noopener noreferrer" className={`${styles.btnDownload} ${styles.btnBlue}`}>
+                                        Support on Ko-fi
+                                    </a>
+                                </div>
+                            </GlowCard>
+
+                            <GlowCard glowColor="green" customSize={true}>
+                                <div className={styles.supportCard}>
+                                    <div className={styles.supportIcon} style={{ color: "#00e5a0" }}>
+                                        <CreditCard size={32} />
+                                    </div>
+                                    <h3>BHIM UPI</h3>
+                                    <p>Direct support via UPI for users in India. Scan or use VPA.</p>
+                                    <a href="upi://pay?pa=riteshkanwar0309@axl&pn=Ritesh%20Kanwar&cu=INR" className={`${styles.btnDownload} ${styles.btnGreen}`}>
+                                        Pay via UPI
+                                    </a>
+                                </div>
+                            </GlowCard>
+                        </div>
                     </div>
                 </div>
             </section>
