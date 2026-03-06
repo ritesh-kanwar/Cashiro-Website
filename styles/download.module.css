@@ -349,6 +349,10 @@
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 80px;
     }
+
+    .supportGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -395,5 +399,24 @@
 
     .reqHeader h3 {
         font-size: 1.15rem;
+    }
+}
+@media (max-width: 768px) {
+    .supportGrid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .supportSection {
+        margin-top: 64px;
+    }
+
+    .supportSection h2 {
+        font-size: 1.75rem;
+    }
+
+    .supportCard {
+        padding: 24px 16px;
     }
 }
